@@ -1,22 +1,20 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import styles from './styles';
 
-const GoalItem: React.FC = ({children}) => {
+interface Props {
+  onDelete: (key: number) => void;
+  id: number;
+}
+
+const GoalItem: React.FC<Props> = ({children, onDelete, id}) => {
   return (
-    <View style={styles.listItem}>
-      <Text>{children}</Text>
-    </View>
+    <TouchableOpacity onPress={onDelete.bind(null, id)}>
+      <View style={styles.listItem}>
+        <Text>{children}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  listItem: {
-    padding: 10,
-    marginVertical: 10,
-    backgroundColor: '#ccc',
-    borderColor: 'black',
-    borderWidth: 1,
-  },
-});
 
 export default GoalItem;
