@@ -28,8 +28,14 @@ const GoalInput: React.FC<Props> = ({onCancel, visible, onAddGoal}) => {
           style={styles.input}
           value={enteredGoal}
         />
-        <Button title="CANCEL" color="red" onPress={onCancel} />
-        <Button title="ADD" onPress={addGoalHandler} />
+        <View style={styles.buttonContainer}>
+          <View style={styles.button}>
+            <Button title="CANCEL" color="red" onPress={onCancel} />
+          </View>
+          <View style={styles.button}>
+            <Button title="ADD" onPress={addGoalHandler} />
+          </View>
+        </View>
       </View>
     </Modal>
   );
