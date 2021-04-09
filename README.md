@@ -1,8 +1,11 @@
 # firstApp
 
-This is the first app of a series of apps developed in the course of React Native development by Maximilian Schwarzmüller.
+This is the first app of a series of apps developed in the course of React Native development by Maximilian Schwarzmüller. It is a simple note storaging app.
 
 This app was developed only for Android due to my current dev environment.
+
+![first app demo](https://user-images.githubusercontent.com/59004502/114110370-fb196e00-989c-11eb-9f82-908a82fc78b6.png)
+
 
 ## Main libraries
 
